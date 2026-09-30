@@ -1,59 +1,32 @@
-# MyFirstApp
+# TP 1 : Premier projet Angular 22 avec Tailwind CSS
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+## Environnement
+- Node.js v22.22.3 (installé avec nvm), npm 10.9.8
+- Angular CLI 22.2.0
+- Éditeur : Visual Studio Code
 
-## Development server
 
-To start a local development server, run:
-
+## Création du projet
 ```bash
+ng new my-first-app
+cd my-first-app
 ng serve
 ```
+Application disponible sur http://localhost:4200.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**Git :** un dépôt parasite existait dans `C:\Users\ASUS`. J'ai fait `git init -b main` dans le projet, puis `git push` vers GitHub.
 
-## Code scaffolding
+## Arborescence
+- `src/app/` : composants, services et routes de l'application
+- `src/styles.css` : styles globaux (Tailwind y est importé)
+- `src/index.html` : page HTML unique, contient `<app-root>`
+- `src/main.ts` : point d'entrée qui démarre l'application
+- `angular.json` : configuration du workspace (build, serve, styles)
+- `package.json` : dépendances et scripts npm
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Tailwind CSS
+1. `npm install tailwindcss @tailwindcss/postcss postcss`
+2. Fichier `.postcssrc.json` avec le plugin `@tailwindcss/postcss`
+3. `@import 'tailwindcss';` dans `src/styles.css`
+4. Page avec titre et carte dans `src/app/app.html`
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
